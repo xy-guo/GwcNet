@@ -96,4 +96,6 @@ class KITTIDataset(Dataset):
                 return {"left": left_img,
                         "right": right_img,
                         "top_pad": top_pad,
-                        "right_pad": right_pad}
+                        "right_pad": right_pad,
+                        "left_filename": self.left_filenames[index],
+                        "right_filename": self.right_filenames[index]}
