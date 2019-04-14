@@ -6,10 +6,6 @@ from torch.autograd import Variable, Function
 import torch.nn.functional as F
 import math
 import numpy as np
-import cv2
-
-# disable multi-thread
-cv2.setNumThreads(0)
 
 
 def gen_error_colormap():

@@ -7,13 +7,7 @@ from torch.autograd import Variable
 import torchvision.utils as vutils
 import torch.nn.functional as F
 import numpy as np
-import time
-from datasets import *
-from models import *
 import copy
-import yaml
-import sys
-import argparse
 
 
 def make_iterative_func(func):

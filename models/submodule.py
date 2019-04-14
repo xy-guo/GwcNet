@@ -5,7 +5,6 @@ import torch.utils.data
 from torch.autograd import Variable
 from torch.autograd.function import Function
 import torch.nn.functional as F
-import math
 import numpy as np
 
 

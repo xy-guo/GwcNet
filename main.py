@@ -15,18 +15,15 @@ import time
 from tensorboardX import SummaryWriter
 from datasets import __datasets__
 from models import __models__
-from models import *
 from utils import *
 from torch.utils.data import DataLoader
-import skimage
 import gc
-import datetime
-import cv2
 
 cudnn.benchmark = True
 
 parser = argparse.ArgumentParser(description='Group-wise Correlation Stereo Network (GwcNet)')
 parser.add_argument('--model', default='gwcnet-g', help='select a model structure', choices=__models__.keys())
+parser.add_argument('--maxdisp', type=int, default=192, help='maximum disparity')
 
 parser.add_argument('--dataset', required=True, help='dataset name', choices=__datasets__.keys())
 parser.add_argument('--datapath', required=True, help='data path')
@@ -36,7 +33,6 @@ parser.add_argument('--testlist', required=True, help='testing list')
 parser.add_argument('--lr', type=float, default=0.001, help='base learning rate')
 parser.add_argument('--batch_size', type=int, default=16, help='training batch size')
 parser.add_argument('--test_batch_size', type=int, default=8, help='testing batch size')
-parser.add_argument('--maxdisp', type=int, default=192, help='maximum disparity')
 parser.add_argument('--epochs', type=int, required=True, help='number of epochs to train')
 parser.add_argument('--lrepochs', type=str, required=True, help='the epochs to decay lr: the downscale rate')
 
