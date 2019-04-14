@@ -71,13 +71,13 @@ class hourglass(nn.Module):
         self.conv1 = nn.Sequential(convbn_3d(in_channels, in_channels * 2, 3, 2, 1),
                                    nn.ReLU(inplace=True))
 
-        self.conv2 = nn.Sequential(convbn_3d(in_channels * 2, in_channels * 2, 3, 2, 1),
+        self.conv2 = nn.Sequential(convbn_3d(in_channels * 2, in_channels * 2, 3, 1, 1),
                                    nn.ReLU(inplace=True))
 
         self.conv3 = nn.Sequential(convbn_3d(in_channels * 2, in_channels * 4, 3, 2, 1),
                                    nn.ReLU(inplace=True))
 
-        self.conv4 = nn.Sequential(convbn_3d(in_channels * 4, in_channels * 4, 3, 2, 1),
+        self.conv4 = nn.Sequential(convbn_3d(in_channels * 4, in_channels * 4, 3, 1, 1),
                                    nn.ReLU(inplace=True))
 
         self.conv5 = nn.Sequential(
