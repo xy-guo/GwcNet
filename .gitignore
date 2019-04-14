@@ -1,0 +1,5 @@
+*.pyc
+checkpoints
+*.ckpt
+events.out.*
+.idea
