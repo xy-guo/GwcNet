@@ -32,9 +32,10 @@ If you find this code useful in your research, please cite:
 
 ```
 @inproceedings{guo2019group,
-  title={Group-wise correlation stereo network},
+  title={Group-wise Correlation Stereo Network},
   author={Guo, Xiaoyang and Yang, Kai and Yang, Wukui and Wang, Xiaogang and Li, Hongsheng},
-  booktitle={CVPR},
+  booktitle={Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition},
+  pages={3273--3282},
   year={2019}
 }
 ```
